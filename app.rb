@@ -18,6 +18,9 @@ selection = input
 if selection == "b"
 output "Would you like to use the (a)dd (d)ivide, (m)ultiply or (s)ubtract?";
 basicFunction = input
+elsif selection == "a"
+output "Would you like to use the (s)quare root or (p)ower of?"
+advancedFunction = input
 
   if (selection == "b" && basicFunction == "d")
         output "enter a number"
@@ -43,11 +46,15 @@ basicFunction = input
     output "enter second number"
     number2 = input.to_i
     output number1 - number2
-  elsif (selection == "b" && basicFunction == "s")
+  elsif (selection == "a" && advancedFunction == "p")
     output "enter a number"
     number1 = input.to_i
     output "enter second number"
     number2 = input.to_i
-    output number1 - number2  
+    output number1 ** number2
+  elsif (selection == "a" && advancedFunction == "s")
+    output "enter a number"
+    number1 = input.to_f
+    output number1 ** 0.5
   end
 end
